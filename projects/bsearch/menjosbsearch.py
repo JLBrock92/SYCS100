@@ -44,3 +44,21 @@ def bsearch(mylist,x):
             return mid
     return -1
 
+#Jerron Bruce's code begins here
+
+def bSearch(list, num, low, high):
+	if low > high:
+		return -1
+
+	mid = (low + high) / 2
+
+	if list[mid] == num:
+		return mid
+	elif num < list[mid]:
+		return bSearch(list, num, low, mid-1)
+	else:
+		return bSearch(list, num, mid+1, high)
+
+#Bruce's code ends here
+
+
