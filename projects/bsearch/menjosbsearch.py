@@ -86,3 +86,46 @@ def bsearch (ages, targetAge, bottomIndexes=0, topIndexes=5):
     return -1
     
 #Jahmaal Gayle Code ends here    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Jerron Bruce's code starts here
+
+def bSearch(list, num, low, high):
+	list.sort()
+	if low > high:
+		return -1
+
+	mid = (low + high) / 2
+
+	if list[mid] == num:
+		return mid
+	elif num < list[mid]:
+		return bSearch(list, num, low, mid-1)
+	else:
+		return bSearch(list, num, mid+1, high)
+
+# Bruce's code ends here
